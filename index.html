@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/music_control.css">
 </head>
 
 <body>
@@ -14,77 +15,58 @@
   <div class="conteiner">
     <div class="cont">
       <aside>
-        <ul id="pages">
-          <li class="swap_page swap_page_active" id="home"><img src="./icons/home_icon_full.png"
-              alt=""><span>Home</span>
-          </li>
-          <li class="swap_page" id="search"><img src="./icons/search_icon_full.png" alt=""><span>Search</span></li>
-          <li class="swap_page" id="your_library"><img src="./icons/Library_Fill_S.png" alt=""><span>Your Library</span>
-          </li>
-        </ul>
+        <div class="stiky_cont">
+          <ul id="pages">
+            <li class="swap_page swap_page_active" id="home"><img src="./icons/home_icon_full.png"
+                alt=""><span>Home</span>
+            </li>
+            <li class="swap_page" id="search"><img src="./icons/search_icon_full.png" alt=""><span>Search</span></li>
+            <li class="swap_page" id="your_library"><img src="./icons/Library_Fill_S.png" alt=""><span>Your
+                Library</span>
+            </li>
+          </ul>
 
-        <ul id="playlists">
-          <li class="cteate_playlist playlist"><img src="./icons/add_play_list.png" alt=""><span>Create Playlist</span>
-          </li>
-          <li class="liked_songs playlist playlist_active"><img src="./icons/liked_songs.png" alt=""><span>Create
-              Playlist</span></li>
-        </ul>
+          <ul id="playlists">
+            <li class="cteate_playlist playlist"><img src="./icons/add_play_list.png" alt=""><span>Create
+                Playlist</span>
+            </li>
+            <li class="liked_songs playlist playlist_active" id="liked_playlis"><img src="./icons/liked_songs.png" alt=""><span>Liked
+                Songs</span></li>
+          </ul>
 
 
-        <ul id="links">
-          <li class="link"><span>Chill Mix</span></li>
-          <li class="link"><span>Insta Hits</span></li>
-          <li class="link"><span>Your Top Songs 2021</span></li>
-          <li class="link"><span>Mellow Songs</span></li>
-          <li class="link"><span>Anime Lofi & Chillhop Music</span></li>
-          <li class="link"><span>BG Afro “Select” Vibes</span></li>
-          <li class="link"><span>Afro “Select” Vibes</span></li>
-          <li class="link"><span>Happy Hits!</span></li>
-          <li class="link"><span>Deep Focus</span></li>
-          <li class="link"><span>Instrumental Study</span></li>
-          <li class="link"><span>OST Compilations</span></li>
-          <li class="link"><span>Nostalgia for old souled mill...</span></li>
-          <li class="link"><span>Mixed Feelings</span></li>
-        </ul>
+          <ul id="links">
+            <li class="link"><span>Chill Mix</span></li>
+            <li class="link"><span>Insta Hits</span></li>
+            <li class="link"><span>Your Top Songs 2021</span></li>
+            <li class="link"><span>Mellow Songs</span></li>
+            <li class="link"><span>Anime Lofi & Chillhop Music</span></li>
+            <li class="link"><span>BG Afro “Select” Vibes</span></li>
+            <li class="link"><span>Afro “Select” Vibes</span></li>
+            <li class="link"><span>Happy Hits!</span></li>
+            <li class="link"><span>Deep Focus</span></li>
+            <li class="link"><span>Instrumental Study</span></li>
+            <li class="link"><span>OST Compilations</span></li>
+            <li class="link"><span>Nostalgia for old souled mill...</span></li>
+            <li class="link"><span>Mixed Feelings</span></li>
+          </ul>
+        </div>
 
       </aside>
 
+      <div class="user_box">
+        <div></div>
+        <div class="user"><img src="./icons/user.png" alt=""> <span class="user_name">davedirect3</span> <img
+            src="./icons/arrow_bottom.png" alt=""></div>
+      </div>
+      <div class="home_page" id="page">
 
-      <main>
-        <div class="user_box">
-          <div></div>
-          <div class="user"><img src="./icons/user.png" alt=""> <span class="user_name">davedirect3</span> <img
-              src="./icons/arrow_bottom.png" alt=""></div>
-        </div>
 
         <div class="good_afternoon">
           <h1>Good afternoon</h1>
 
           <div class="afternoon_main">
-            <div class="afternoon_item">
-              <img src="./screens/Chill Mix.svg" alt="">
-              <span>Chill Mix</span>
-            </div>
-            <div class="afternoon_item">
-              <img src="./screens/Chill Mix.svg" alt="">
-              <span>Chill Mix</span>
-            </div>
-            <div class="afternoon_item">
-              <img src="./screens/Chill Mix.svg" alt="">
-              <span>Chill Mix</span>
-            </div>
-            <div class="afternoon_item">
-              <img src="./screens/Chill Mix.svg" alt="">
-              <span>Chill Mix</span>
-            </div>
-            <div class="afternoon_item">
-              <img src="./screens/Chill Mix.svg" alt="">
-              <span>Chill Mix</span>
-            </div>
-            <div class="afternoon_item">
-              <img src="./screens/Chill Mix.svg" alt="">
-              <span>Chill Mix</span>
-            </div>
+
           </div>
 
         </div>
@@ -98,6 +80,7 @@
             <div class="create_recom your_top_mixes" name="your_top_mixes">
               <div class="recomend_item">
                 <img src="./screens/Chill Mix.svg" alt="">
+                <div class="play_playlist"></div>
                 <h3>Chill Mix</h3>
                 <p>Julia Wolf, Khalid, ayokay and more</p>
               </div>
@@ -110,11 +93,7 @@
               <span>SEE ALL</span>
             </div>
             <div class="create_recom made_for_you" name="made_for_you">
-              <div class="recomend_item">
-                <img src="./screens/Chill Mix.svg" alt="">
-                <h3>Chill Mix</h3>
-                <p>Julia Wolf, Khalid, ayokay and more</p>
-              </div>
+
             </div>
 
           </div>
@@ -124,11 +103,7 @@
               <span>SEE ALL</span>
             </div>
             <div class="create_recom recently_played" name="recently_played">
-              <div class="recomend_item">
-                <img src="./screens/Chill Mix.svg" alt="">
-                <h3>Chill Mix</h3>
-                <p>Julia Wolf, Khalid, ayokay and more</p>
-              </div>
+
             </div>
 
           </div>
@@ -138,11 +113,7 @@
               <span>SEE ALL</span>
             </div>
             <div class="create_recom jump_back_in" name="jump_back_in">
-              <div class="recomend_item">
-                <img src="./screens/Chill Mix.svg" alt="">
-                <h3>Chill Mix</h3>
-                <p>Julia Wolf, Khalid, ayokay and more</p>
-              </div>
+
             </div>
 
           </div>
@@ -152,11 +123,7 @@
               <span>SEE ALL</span>
             </div>
             <div class="create_recom uniquely_yours" name="uniquely_yours">
-              <div class="recomend_item">
-                <img src="./screens/Chill Mix.svg" alt="">
-                <h3>Chill Mix</h3>
-                <p>Julia Wolf, Khalid, ayokay and more</p>
-              </div>
+
             </div>
 
           </div>
@@ -166,44 +133,139 @@
               <span>SEE ALL</span>
             </div>
             <div class="create_recom just_the_hits" name="just_the_hits">
-              <div class="recomend_item">
-                <img src="./screens/Chill Mix.svg" alt="">
-                <h3>Chill Mix</h3>
-                <p>Julia Wolf, Khalid, ayokay and more</p>
-              </div>
+
             </div>
 
           </div>
 
         </div>
-      </main>
-    </div>
-
-    <div class="music_player">
-      <div class="player_music_name">
-        <div>
-        <h3>Play It Safe</h3>
-        <span>Julia Wolf</span>
-        </div>
-        <img src="./icons/active_like.png" alt="">
       </div>
-      <div class="music_player_box"></div>
-      <div class="music_player_options"></div>
+
+      <div class="page_playlist" id="page" >
+
+        <div class="page_playlist_info">
+          <div class="page_playlist_info_img">
+            <img class="playlist_img" src="./screens/Pop Mix.svg" alt="">
+          </div>
+          <div class="page_playlist_info_titlename">
+            <span>PUBLIC PLAYLIST</span>
+            <h1 id="name_playlist">Chill Mix</h1>
+            <h4><span class="acters_info">Julia Wolf, ayokay, Khalid</span> and more</h4>
+            <p>Made for <span class="playlist_user_name">davedirect3</span> <span class="toshka"></span> 34 songs, 2hr
+              01 min</p>
+          </div>
+        </div>
+        <div class="playlist_options">
+          <div class="playlist_options_topside">
+            <div class="playlist_options_topside_left_items">
+              <img class="playlist_play" src="./icons/play_green.svg" width="72px" alt="">
+              <img class="playlist_like" src="./icons/like.png" width="39px" alt="">
+              <img class="playlist_download" src="./icons/download.svg" width="38px" alt="">
+              <img class="playlist_options" src="./icons/options.svg" width="31px" alt="">
+            </div>
+            <div class="playlist_options_topside_right_items">
+              <img class="playlist_search" src="./icons/search.svg" width="23px" alt="">
+              <select>
+                <option value="Custom order">Custom order</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="playlist_musics">
+          <table class="all_musics" data-num="0">
+          </table>
+        </div>
+      </div>
+
+      <div class="liked_playlist" id="page">
+
+        <div class="liked_playlist_info">
+          <div class="liked_playlist_info_img">
+            <img class="playlist_img" src="./screens/liked_screen.svg" alt="">
+          </div>
+          <div class="liked_playlist_info_titlename">
+            <span>PUBLIC PLAYLIST</span>
+            <h1 id="name_playlist">Chill Mix</h1>
+            <div class="user"><img src="./icons/user.png" alt=""> <span class="user_name">davedirect3</span> <img
+                src="./icons/arrow_bottom.png" alt=""></div>
+          </div>
+        </div>
+        <div class="playlist_options">
+          <div class="playlist_options_topside">
+            <div class="playlist_options_topside_left_items">
+              <img class="playlist_play" src="./icons/play_green.svg" width="72px" alt="">
+              <img class="playlist_like" src="./icons/like.png" width="39px" alt="">
+              <img class="playlist_download" src="./icons/download.svg" width="38px" alt="">
+              <img class="playlist_options" src="./icons/options.svg" width="31px" alt="">
+            </div>
+            <div class="playlist_options_topside_right_items">
+              <img class="playlist_search" src="./icons/search.svg" width="23px" alt="">
+              <select>
+                <option value="Custom order">Custom order</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="playlist_musics">
+          <table class="all_liked_musics"  data-num="1">
+          </table>
+        </div>
+      </div>
+
+
+
+      
+      <div id="audio-player-container" class="music_player_main">
+        <div class="logo_img_main">
+          <img class="logo_img" src="https://i.scdn.co/image/ab67616d0000b2730f374035d274fd884ee522fb" alt="">
+        </div>
+        <div class="player_music_name">
+          <div class="player_music_title">
+            <h3 id="music_namee">Play It Safe</h3>
+            <span id="artist_name">Julia Wolf</span>
+          </div>
+          <img class="control_like" src="./icons/active_like.png" alt="">
+        </div>
+        <div class="music_player">
+          <div class="music_player_options">
+            <audio
+              src="https://p.scdn.co/mp3-preview/1498488e5dfe698984f05757651367709be3a50e?cid=9950ac751e34487dbbe027c4fd7f8e99"
+              class="audio" preload="metadata" loop></audio>
+            <span class="random"></span>
+            <span class="music_back"></span>
+            <button id="play-icon"></button>
+            <span class="music_next"></span>
+            <span class="music_reload"></span>
+          </div>
+          <div class="music_line">
+            <span id="current-time" class="time">0:00</span>
+            <input type="range" id="seek-slider" class="range" width="" value="0">
+            <span id="duration" class="time">0:00</span>
+          </div>
+        </div>
+        <div class="music_player_controls">
+          <img src="./icons/Queue.svg" alt="">
+          <img src="./icons/Devices_XS.svg" alt="">
+          <button id="mute-icon"></button>
+          <output id="volume-output">100</output>
+          <input type="range" id="volume-slider" max="100" value="100">
+          <img src="./icons/FullScreen_S.svg" width="32px" alt="">
+
+        </div>
+      </div>
+
+
     </div>
 
 
 
-  </div>
 
 
 
 
 
-
-
-
-
-  <script type="module" src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
