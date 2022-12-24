@@ -8,29 +8,35 @@
   <title>Document</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/music_control.css">
+  <link rel="stylesheet" href="./css/media.css">
 </head>
 
 <body>
 
   <div class="conteiner">
     <div class="cont">
-      <aside>
+      <aside class="aside">
         <div class="stiky_cont">
           <ul id="pages">
-            <li class="swap_page swap_page_active" id="home"><img src="./icons/home_icon_full.png"
-                alt=""><span>Home</span>
+            <li class="swap_page swap_page_active" id="home"><img src="./icons/home_icon_full.png" alt=""><span
+                class="deltext">Home</span>
             </li>
-            <li class="swap_page" id="search"><img src="./icons/search_icon_full.png" alt=""><span>Search</span></li>
-            <li class="swap_page" id="your_library"><img src="./icons/Library_Fill_S.png" alt=""><span>Your
+            <li class="swap_page" id="search"><img src="./icons/search_icon_full.png" alt=""><span
+                class="deltext">Search</span></li>
+            <li class="swap_page" id="your_library"><img src="./icons/Library_Fill_S.png" alt=""><span
+                class="deltext">Your
                 Library</span>
             </li>
           </ul>
 
           <ul id="playlists">
-            <li class="cteate_playlist playlist"><img src="./icons/add_play_list.png" alt=""><span>Create
+            <li class="cteate_playlist playlist"><img src="./icons/add_play_list.png" alt=""><span
+                class="deltext">Create
                 Playlist</span>
             </li>
-            <li class="liked_songs playlist playlist_active" id="liked_playlis"><img src="./icons/liked_songs.png" alt=""><span>Liked
+            <li class="playylists playlist playlist_active"></li>
+            <li class="liked_songs playlist playlist_active" id="liked_playlis"><img src="./icons/liked_songs.png"
+                alt=""><span class="deltext"> Liked
                 Songs</span></li>
           </ul>
 
@@ -55,7 +61,11 @@
       </aside>
 
       <div class="user_box">
-        <div></div>
+        <div class="search_box">
+          <img src="./icons/search.svg" alt="">
+
+          <input class="search" type="text" placeholder="Artists, songs, or podcasts">
+        </div>
         <div class="user"><img src="./icons/user.png" alt=""> <span class="user_name">davedirect3</span> <img
             src="./icons/arrow_bottom.png" alt=""></div>
       </div>
@@ -141,7 +151,7 @@
         </div>
       </div>
 
-      <div class="page_playlist" id="page" >
+      <div class="page_playlist" id="page">
 
         <div class="page_playlist_info">
           <div class="page_playlist_info_img">
@@ -185,7 +195,7 @@
           </div>
           <div class="liked_playlist_info_titlename">
             <span>PUBLIC PLAYLIST</span>
-            <h1 id="name_playlist">Chill Mix</h1>
+            <h1 id="name_playlist">Liked Songs</h1>
             <div class="user"><img src="./icons/user.png" alt=""> <span class="user_name">davedirect3</span> <img
                 src="./icons/arrow_bottom.png" alt=""></div>
           </div>
@@ -207,65 +217,202 @@
           </div>
         </div>
         <div class="playlist_musics">
-          <table class="all_liked_musics"  data-num="1">
+          <table class="all_liked_musics" data-num="1">
           </table>
         </div>
       </div>
 
-
-
+      <div class="playlist_menu">
+        <div class="close_menu"></div>
+        <h1>ADD TO PLAYLIST</h1>
+        <div class="create_playlists">
+          <div>
+            <p>MyPLay</p>
+            <span>122 songs</span>
+          </div>
+        </div>
+        <form class="add_playlist" name="add_playlist" action="">
+          <input type="text" name="name">
+          <button class="add_playlist_btn">SAVE</button>
+        </form>
+      </div>
       
-      <div id="audio-player-container" class="music_player_main">
-        <div class="logo_img_main">
-          <img class="logo_img" src="https://i.scdn.co/image/ab67616d0000b2730f374035d274fd884ee522fb" alt="">
+    </div>
+  </div>
+  <div class="bg"></div>
+  <div class="mobile_cont">
+    <div class="mobile_home" id="page">
+      <div class="good_afternoon">
+        <h1>Good afternoon</h1>
+
+        <div class="afternoon_main_modile">
+
         </div>
-        <div class="player_music_name">
-          <div class="player_music_title">
-            <h3 id="music_namee">Play It Safe</h3>
-            <span id="artist_name">Julia Wolf</span>
+
+      </div>
+
+      <div class="create_recomends">
+        <div class="recomend">
+          <div class="logo_recomend">
+            <h1>Your top mixes</h1>
           </div>
-          <img class="control_like" src="./icons/active_like.png" alt="">
-        </div>
-        <div class="music_player">
-          <div class="music_player_options">
-            <audio
-              src="https://p.scdn.co/mp3-preview/1498488e5dfe698984f05757651367709be3a50e?cid=9950ac751e34487dbbe027c4fd7f8e99"
-              class="audio" preload="metadata" loop></audio>
-            <span class="random"></span>
-            <span class="music_back"></span>
-            <button id="play-icon"></button>
-            <span class="music_next"></span>
-            <span class="music_reload"></span>
+          <div class="create_recom your_top" name="your_top">
+            <div class="recomend_item">
+              <img src="./screens/Chill Mix.svg" alt="">
+              <h3>Chill Mix</h3>
+            </div>
           </div>
-          <div class="music_line">
-            <span id="current-time" class="time">0:00</span>
-            <input type="range" id="seek-slider" class="range" width="" value="0">
-            <span id="duration" class="time">0:00</span>
-          </div>
-        </div>
-        <div class="music_player_controls">
-          <img src="./icons/Queue.svg" alt="">
-          <img src="./icons/Devices_XS.svg" alt="">
-          <button id="mute-icon"></button>
-          <output id="volume-output">100</output>
-          <input type="range" id="volume-slider" max="100" value="100">
-          <img src="./icons/FullScreen_S.svg" width="32px" alt="">
 
         </div>
       </div>
 
 
+
     </div>
+    <div class="mobile_playlist_page" id="page">
+      <div class="mobile_playlist_logo">
+        <div class="mobile_playlist_page_img">
+        </div>
+        <img src="./screens/Pop Mix.svg" alt="">
+        <h1 class="mobile_playlist_name">POP MIX</h1>
+      </div>
+      <div class="mobile_playlist_info">
+        <p class="mobile_playlist_title">Los hits de ahora en la playlist más grande de España. Foto: LucasRequena</p>
+        <div class="stotify_logo">
+          <img src="./icons/spotify_logo.svg" width="24px" alt="">
+          <p>Spotify</p>
+        </div>
+        <p class="mobile_playlist_time">2.237.746 “me gusta” • 2h 49m</p>
+        <div class="modile_playlist_options">
+          <div class="lef">
+            <img src="./icons/active_like.png" width="24px" alt="">
+            <img src="./icons/download.svg" width="24px" alt="">
+            <img src="./icons/options.svg" width="24px" alt="">
+          </div>
+          <div class="righ">
+            <img src="./icons/play_green.svg" class="playlist_play" width="56px" alt="">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile_playlist_create_musics">
+
+        <div class="mobile_music_playlist_item">
+          <div class="itemleft">
+            <img class="TrackImg" src="./screens/Indie Mix.svg" alt="">
+            <div class="item_name">
+              <p>El cuarteto de Ibai </p>
+              <div>
+                <img src="./icons/download.svg" alt="">
+                <p>Lucas Requena, Ibai Llanos, ortoPilot</p>
+              </div>
+            </div>
+          </div>
+          <div class="itemright">
+            <img src="./icons/options.svg" alt="">
+          </div>
+        </div>
 
 
+      </div>
+    </div>
+    
+    <div class="pages_mobile">
+      <ul id="pages">
+        <li class="swap_page swap_page_active" id="home_mobile"><img src="./icons/home_icon_full.png" alt=""><span
+            class="deltext">Home</span>
+        </li>
+        <li class="swap_page" id="search"><img src="./icons/search_icon_full.png" alt=""><span
+            class="deltext">Search</span></li>
+        <li class="swap_page" id="your_library"><img src="./icons/Library_Fill_S.png" alt=""><span class="deltext">Your
+            Library</span>
+        </li>
+      </ul>
+    </div>
+  </div>
 
+  <!-- <div id="audio-player-container" class="music_player_main">
 
+    <div class="player_music_name">
+      <div class="logo_img_main">
+        <img class="logo_img" src="https://i.scdn.co/image/ab67616d0000b2730f374035d274fd884ee522fb" alt="">
+      </div>
+      <div class="player_music_title">
 
+        <h3 id="music_namee">Play It Safe</h3>
+        <span id="artist_name">Julia Wolf</span>
+      </div>
+      <img class="control_like" src="" alt="">
+    </div>
+    <div class="music_player">
+      <div class="music_player_options">
+        <audio
+          src="https://p.scdn.co/mp3-preview/1498488e5dfe698984f05757651367709be3a50e?cid=9950ac751e34487dbbe027c4fd7f8e99"
+          class="audio" preload="metadata" loop></audio>
+        <span class="random icon"></span>
+        <span class="music_back icon"></span>
+        <button id="play-icon"></button>
+        <span class="music_next icon"></span>
+        <span class="music_reload icon"></span>
+      </div>
+      <div class="music_line">
+        <span id="current-time" class="time">0:00</span>
+        <input type="range" id="seek-slider" class="range" width="" value="0">
+        <span id="duration" class="time">0:00</span>
+      </div>
+    </div>
+    <div class="music_player_controls">
 
+      <button id="mute-icon"></button>
+      <output id="volume-output">100</output>
+      <input type="range" id="volume-slider" max="100" value="100">
+      <img src="./icons/FullScreen_S.svg" width="32px" alt="">
 
+    </div>
+  </div> -->
+  <div id="audio-player-container" class="music_player_main active_music_window">
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="./index.js"></script>
+    <div class="player_music_name">
+      <div class="logo_img_main">
+        <img class="logo_img" src="https://i.scdn.co/image/ab67616d0000b2730f374035d274fd884ee522fb" alt="">
+      </div>
+      <div class="player_music_title">
+
+        <h3 id="music_namee">Play It Safe</h3>
+        <span id="artist_name">Julia Wolf</span>
+      </div>
+      <img class="control_like" src="" alt="">
+    </div>
+    <div class="music_player">
+      <div class="music_player_options">
+        <audio
+          src="https://p.scdn.co/mp3-preview/1498488e5dfe698984f05757651367709be3a50e?cid=9950ac751e34487dbbe027c4fd7f8e99"
+          class="audio" preload="metadata" loop></audio>
+        <span class="random icon"></span>
+        <span class="music_back icon"></span>
+        <button id="play-icon"></button>
+        <span class="music_next icon"></span>
+        <span class="music_reload icon"></span>
+      </div>
+      <div class="music_line">
+        <span id="current-time" class="time">0:00</span>
+        <input type="range" id="seek-slider" class="range" width="" value="0">
+        <span id="duration" class="time">0:00</span>
+      </div>
+    </div>
+    <div class="music_player_controls">
+
+      <button id="mute-icon"></button>
+      <output id="volume-output">100</output>
+      <input type="range" id="volume-slider" max="100" value="100">
+      <img src="./icons/FullScreen_S.svg" width="32px" alt="">
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="./index.js"></script>
 </body>
 
 </html>

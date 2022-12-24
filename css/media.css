@@ -1,0 +1,209 @@
+@media only screen and (max-width: 1200px) {
+    .logo_img_main {
+        top: 0;
+        position: unset;
+
+        width: 70px;
+        height: 70px;
+    }
+
+    #name_playlist {
+        font-size: 50px;
+    }
+
+    .playlist_menu {}
+
+    .music_player_main {
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 935px) {
+
+
+
+    .playlist {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user_box {
+        padding: 0 100px;
+    }
+
+    .swap_page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aside {
+        padding: 75px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .deltext {
+        display: none;
+    }
+
+    .create_recom {
+        overflow-x: scroll;
+        max-width: 100%;
+    }
+
+    .recomend_item {
+        min-width: 200px;
+    }
+
+    .playylists div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: none;
+        /* white-space: pre-wrap; */
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .time {
+        font-size: 16px;
+    }
+
+    #mute-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    #volume-output {
+        font-size: 16px;
+    }
+
+    .logo_img_main {}
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .home_page {
+        width: 90%;
+    }
+
+    .aside {}
+}
+
+@media only screen and (max-width: 680px) {
+
+    #music_namee {
+        font-size: 16px;
+    }
+
+    #artist_name {
+        font-size: 12px;
+    }
+
+    .logo_img_main {
+        top: 0;
+        position: unset;
+
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: #121212;
+    }
+
+    .mobile_cont {
+        display: block;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+
+        height: 1px;
+
+    }
+    
+    input[type="range"]::before {
+
+        height: 1px;
+
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        border: 0px solid white;
+        height: 0px;
+        width: 0px;
+        margin: 0px 0 0 0; 
+    }
+    .music_player_main {
+
+        position: sticky;
+        bottom: 85px;
+        left: 0;
+        width: 100%;
+        height: 72px;
+        background-color: #181818;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 32px;
+        gap: 10px;
+    }
+        /* .active_music_window{
+            position: fixed;
+            height: 100%;
+            z-index: 20 ;
+        } */
+
+
+
+
+
+    .music_player {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+        width: fit-content;
+    }
+
+    .logo_img_main {
+        all: unset;
+
+    }
+
+    .logo_img {
+        all: unset;
+        width: 52px;
+
+    }
+
+    .player_music_name {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .conteiner, .music_player_controls, .control_like, .icon, .time {
+        display: none;
+    }
+
+    .music_line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1px;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {}
