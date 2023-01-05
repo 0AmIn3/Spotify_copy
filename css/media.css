@@ -11,7 +11,7 @@
         font-size: 50px;
     }
 
-    .playlist_menu {}
+
 
     .music_player_main {
         height: 100px;
@@ -26,6 +26,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        /* flex-direction: column; */
+        /* background-color: red; */
+
     }
 
     .user_box {
@@ -38,8 +41,8 @@
         justify-content: center;
     }
 
-    .aside {
-        padding: 75px 0;
+    .conteiner .cont .aside {
+        padding: 75px 0 200px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -58,8 +61,8 @@
         min-width: 200px;
     }
 
-    .playylists div {
-        width: 100%;
+    .conteiner .cont .aside #playlists .playylists div {
+        width: 74px;
         display: flex;
         flex-direction: column;
         justify-content: none;
@@ -84,7 +87,10 @@
         font-size: 16px;
     }
 
-    .logo_img_main {}
+    .aside {
+        padding: 75px 0px 200px 0px;
+
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -93,31 +99,6 @@
     .home_page {
         width: 90%;
     }
-
-    .aside {}
-}
-
-@media only screen and (max-width: 680px) {
-
-    #music_namee {
-        font-size: 16px;
-    }
-
-    #artist_name {
-        font-size: 12px;
-    }
-
-    .logo_img_main {
-        top: 0;
-        position: unset;
-
-        width: 50px;
-        height: 50px;
-    }
-
-}
-
-@media only screen and (max-width: 480px) {
     body {
         background-color: #121212;
     }
@@ -125,24 +106,15 @@
     .mobile_cont {
         display: block;
     }
-    input[type="range"]::-webkit-slider-runnable-track {
 
-        height: 1px;
 
+    :root {
+        --height: 1px;
+        --boll: none;
     }
-    
-    input[type="range"]::before {
 
-        height: 1px;
 
-    }
-    
-    input[type="range"]::-webkit-slider-thumb {
-        border: 0px solid white;
-        height: 0px;
-        width: 0px;
-        margin: 0px 0 0 0; 
-    }
+
     .music_player_main {
 
         position: sticky;
@@ -153,39 +125,44 @@
         background-color: #181818;
         color: white;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 0 32px;
         gap: 10px;
+        transition: 0.3s ease;
+        z-index: 10;
     }
-        /* .active_music_window{
-            position: fixed;
-            height: 100%;
-            z-index: 20 ;
-        } */
 
+    .open_music_window {
+        display: block;
+    }
 
+    .close_music_window {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 32px;
+        height: 32px;
+        background-image: url(../icons/close_playlist_menu.svg);
+        background-position: center;
+        background-size: cover;
+        filter: invert(100%);
+        display: none;
+    }
 
 
 
     .music_player {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center;
         gap: 20px;
         width: fit-content;
     }
 
-    .logo_img_main {
-        all: unset;
 
-    }
-
-    .logo_img {
-        all: unset;
-        width: 52px;
-
-    }
 
     .player_music_name {
         display: flex;
@@ -204,6 +181,54 @@
         height: 1px;
     }
 
+    .player_music_title {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .logo_img_main {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .playlist_menu {
+        width: 300px;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+
+    #music_namee {
+        font-size: 16px;
+    }
+
+    #artist_name {
+        font-size: 12px;
+    }
+
+    .logo_img_main {
+        top: 0;
+        position: unset;
+
+        width: 72px;
+        height: 72px;
+    }
+
+}
+
+@media only screen and (max-width: 485px) {
+
+    /* .conteiner, .music_player_controls, .control_like, .icon, .time {
+        display: block;
+    } */
+}
+
+@media only screen and (max-width: 480px) {
+ 
 }
 
 @media only screen and (max-width: 320px) {}

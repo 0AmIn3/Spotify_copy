@@ -1,12 +1,13 @@
 .mobile_cont {
     min-width: 375px;
-    max-width: 480px;
+    max-width: 768px;
     height: fit-content;
     display: none;
 
+
     .mobile_home {
-        display: none;
-        padding: 76px 16px 0 16px;
+        display: block;
+        padding: 76px 16px 100px 16px;
         background: radial-gradient(89.12% 89.12% at 17.33% -4.18%, #A1546E 0%, rgba(18, 18, 18, 0.59) 100%), #121212;
 
         .good_afternoon {
@@ -128,9 +129,10 @@
     }
 
     .mobile_playlist_page {
-        display: flex;
+        display: none;
         flex-direction: column;
         color: white;
+        padding-bottom: 200px;
 
         .mobile_playlist_logo {
             display: flex;
@@ -143,10 +145,9 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-image: url('../screens/Pop\ Mix.svg');
+                background-image: url('../screens/Indie\ Mix.svg');
                 background-position: center;
                 background-size: cover;
-                background-color: red;
                 filter: blur(28px);
 
 
@@ -171,6 +172,7 @@
                 letter-spacing: -1.2999999523162842px;
                 text-align: center;
                 white-space: nowrap;
+                z-index: 0;
             }
 
         }
@@ -242,6 +244,7 @@
                     display: flex;
                     align-items: center;
                     gap: 8px;
+                    width: 100%;
 
                     .TrackImg {
                         width: 48px;
@@ -264,6 +267,7 @@
 
                             img {
                                 width: 16px;
+
                             }
 
                             p {
@@ -278,11 +282,77 @@
                 }
 
                 .itemright {
+                    cursor: pointer;
+                    position: relative;
+
                     img {
                         width: 24px;
                         filter: invert(50%);
                     }
+
+                    .mobile_options {
+                        display: none;
+                        position: absolute;
+                        width: 100px;
+                        height: fit-content;
+                        background-color: #282828;
+                        top: -50px;
+                        left: -100px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 14px;
+                        text-align: center;
+                        gap: 5px;
+                        transition: 0.3s ease;
+                        padding: 5px 0;
+                        .mobile_add_playlisyt {
+                            width: 100%;
+                        }
+
+                        .mobile_like_music {
+                            width: 100%;
+                            border-top: #B3B3B3 1px solid;
+                            padding-top: 5px;
+                        }
+
+                        .mobile_start_music {
+                            width: 100%;
+                            border-top: #B3B3B3 1px solid;
+                            padding-top: 5px;
+
+                        }
+                        .mobile_delete_music {
+                            width: 100%;
+                            border-top: #B3B3B3 1px solid;
+                            padding-top: 5px;
+
+                        }
+                    }
                 }
+            }
+        }
+    }
+
+    .mobile_library {
+
+        height: 500px;
+        padding: 76px 16px 100px 16px;
+        background: #121212;
+
+        color: white;
+        display: none;
+        .playylists_mobile {
+            width: 100%;
+            height: fit-content;
+            margin-top: 50px;
+            div {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: #B3B3B3 1px solid;
+                padding: 15px 20px;
             }
         }
     }
@@ -294,7 +364,7 @@
         background-color: #282828;
         left: 0;
         bottom: 0;
-        margin-top: 20px;   
+        margin-top: 20px;
         z-index: 2;
 
         #pages {
@@ -330,8 +400,141 @@
 
     }
 
+    .mobile_search_page{
+
+        height: 800px;
+        padding: 76px 16px 100px 16px;
+        background: radial-gradient(89.12% 89.12% at 17.33% -4.18%, #A1546E 0%, rgba(18, 18, 18, 0.59) 100%), #121212;
+
+        color: white;
+        display: none;
+        .search_box {
+
+            height: 52px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 18px;
+            gap: 16px;
+            border-radius: 26px;
+
+            img {
+                filter: invert(100%);
+            }
+
+            .search_mobile {
+                all: unset;
+                height: 100%;
+                color: black;
+            }
+        }
+        .Mobile_create_Search_Elem{
+            width: 100%;
+            height: fit-content;
+            margin-top: 50px;
+
+            .mobile_music_playlist_item {
+                padding: 16px 0 0 0;
+                // background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .itemleft {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    width: 100%;
+
+                    .TrackImg {
+                        width: 48px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        font-weight: 600;
+                        line-height: 16px;
+                    }
+
+                    .item_name {
+                        display: flex;
+                        flex-direction: column;
+
+                        div {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+
+                            img {
+                                width: 16px;
+
+                            }
+
+                            p {
+                                color: #B3B3B3;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 14px;
+                                letter-spacing: -0.30000001192092896px;
+                            }
+                        }
+                    }
+                }
+
+                .itemright {
+                    cursor: pointer;
+                    position: relative;
+
+                    img {
+                        width: 24px;
+                        filter: invert(50%);
+                    }
+
+                    .mobile_options {
+                        display: none;
+                        position: absolute;
+                        width: 100px;
+                        height: fit-content;
+                        background-color: #282828;
+                        top: -50px;
+                        left: -100px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 14px;
+                        text-align: center;
+                        gap: 5px;
+                        transition: 0.3s ease;
+                        padding: 5px 0;
+                        .mobile_add_playlisyt {
+                            width: 100%;
+                        }
+
+                        .mobile_like_music {
+                            width: 100%;
+                            border-top: #B3B3B3 1px solid;
+                            padding-top: 5px;
+                        }
+
+                        .mobile_start_music {
+                            width: 100%;
+                            border-top: #B3B3B3 1px solid;
+                            padding-top: 5px;
+
+                        }
+                        .mobile_delete_music {
+                            width: 100%;
+                            border-top: #B3B3B3 1px solid;
+                            padding-top: 5px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 
 
 
-}   
+}
